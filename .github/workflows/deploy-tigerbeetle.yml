@@ -71,7 +71,7 @@ jobs:
               | .change.actions
               | select(index("delete"))]
             | length == 0
-          ' infra/stacks/tigerbeetle/tigerbeetle-plan.json
+          ' tigerbeetle-plan.json
       - name: Apply TigerBeetle
         run: terraform -chdir=infra/stacks/tigerbeetle apply -auto-approve tfplan
       - name: Wait for instance checks
